@@ -1,0 +1,84 @@
+Install Nmap in pc 
+
+    Step 1: Update Ubuntu Package List
+    sudo apt-get update
+
+    Step 2: Install Nmap
+    sudo apt-get install nmap  /sudo apt install nmap
+
+    Step 3: Verify Nmap Version Installed
+    nmap --version
+
+
+Nmap commands 
+
+Localhost check for opened ports:
+nmap localhost
+
+Scan remote host 8.8.8.8 for all open port TCP ports:
+nmap 8.8.8.8
+
+Scan remote host 8.8.8.8 for all TCP and UDP ports:
+nmap -sUT 8.8.8.8
+
+Scan remote host 8.8.8.8 TCP port 53:
+sudo nmap -p 53
+
+Scan remote host 8.8.8.8 UDP port 53:
+nmap -sU -p 53 8.8.8.8
+
+Scan remote host 8.8.8.8 for open TCP and UDP ports:
+nmap -sUT --open 8.8.8.8
+
+Scan you local Ubuntu system TCP ports:
+nmap localhost
+
+
+
+OS Fingerprinting
+OS fingerprinting:
+
+sudo nmap -O
+
+if they block your ping probes you can do:
+sudo nmap -O <target> -Pn
+
+Sometimes you still get fake results and you should try doing an aggressive scan (can be detected and blocked by the firewall).
+sudo nmap -A <target>
+
+
+Nmap to find all hosts by defining an IP range from 1 to 255 (1-255).
+nmap -sP 
+192.168.18.1-255
+
+
+How to find a Live host
+Type “-sP” to scan a list of all live and up hosts:
+sudo nmap -sP 192.168.18.*
+
+
+
+Open Port Scan:
+To scan for open ports on a target system, use the following command:
+nmap -p- <target_ip>
+This command will scan all ports on the target system and report which ones are open.
+
+OS Fingerprinting:
+To perform OS fingerprinting on a target system, use the following command:
+nmap -O <target_ip>
+This command will attempt to identify the operating system running on the target system.
+
+Ping Scan:
+To perform a ping scan on a target system, use the following command:
+nmap -sn <target_ip>
+This command will send an ICMP echo request to the target system and report if it receives a response.
+
+TCP Port Scan:
+To scan for open TCP ports on a target system, use the following command:
+nmap -sS <target_ip>
+This command will perform a SYN scan, which sends a SYN packet to each port and waits for a response. If a SYN/ACK packet is received, the port is considered open.
+
+UDP Port Scan:
+To scan for open UDP ports on a target system, use the following command:
+nmap -sU <target_ip>
+This command will send a UDP packet to each port and wait for a response. If a response is received, the port is considered open.

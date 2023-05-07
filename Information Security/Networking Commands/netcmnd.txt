@@ -1,0 +1,61 @@
+WHOIS: 
+WHOIS is a protocol that provides information about registered domain names, 
+IP addresses, and autonomous systems. WHOIS queries can be used to find out who owns a domain name, 
+when it was registered, and when it will expire, among other details.
+Syntax: whois [domain name or IP address]
+Example: To get information about the domain "google.com", you can run the command 
+    whois google.com.
+
+
+DIG: 
+DIG is a command-line tool for querying DNS servers (Querying DNS servers refers to the process 
+of requesting information from a Domain Name System (DNS) server.). 
+It can be used to look up various DNS records, such as A, MX, NS, and TXT records. 
+DIG can be used to troubleshoot DNS issues, verify DNS configurations, and gather information about DNS servers.
+Syntax: dig [domain name or IP address] [query type]
+Example: To look up the A record for the domain "google.com", you can run the command
+    dig google.com A.
+
+
+NSLOOKUP: 
+NSLOOKUP is another command-line tool for querying DNS servers (Querying DNS servers refers to the process 
+of requesting information from a Domain Name System (DNS) server.). 
+It can be used to look up various DNS records, such as A, MX, NS, and TXT records. 
+NSLOOKUP can be used to troubleshoot DNS issues, verify DNS configurations, and gather information about DNS servers.
+Syntax: nslookup [domain name or IP address] [query type]
+Example: To look up the A record for the domain "google.com", you can run the command 
+    nslookup google.com A.
+
+
+TRACEROUTE: 
+TRACEROUTE is a command-line tool used to trace the path that packets take from your computer to a destination host. 
+TRACEROUTE can be used to identify network bottlenecks, troubleshoot network connectivity issues, 
+and gather information about the network topology between your computer and a destination host.
+Syntax: traceroute [destination host or IP address]
+Example: To trace the path to the domain "google.com", you can run the command 
+    traceroute google.com.
+
+
+
+
+A, MX, NS, and TXT are types of DNS resource records (RRs) that are used to store information about domain names 
+in the Domain Name System (DNS).
+
+A record: It is also known as the Address record, maps a hostname to an IPv4 address. 
+It is the most common type of DNS record and is used to translate domain names into IP addresses. 
+For example, the A record for "google.com" maps the domain name to its IPv4 address, such as "172.217.164.174".
+
+MX record: The Mail Exchange (MX) record specifies the mail server responsible for accepting email messages 
+on behalf of a domain. It maps a domain name to a list of mail exchange servers for that domain. 
+For example, the MX record for "example.com" might specify that the email should be delivered to the mail server 
+at "mail.example.com".
+
+NS record: The Name Server (NS) record indicates the authoritative DNS servers for a domain. 
+It is used to delegate a domain name to a set of DNS servers that are responsible for resolving requests for that domain. 
+For example, the NS record for "example.com" might specify the authoritative DNS servers as 
+"ns1.example.com" and "ns2.example.com".
+
+TXT record: The Text (TXT) record stores arbitrary text data associated with a domain name. 
+It can be used for a variety of purposes, such as domain ownership verification, email authentication, and anti-spam measures. 
+For example, the TXT record for "example.com" might contain a verification code to prove ownership of the domain to a 
+third-party service.
